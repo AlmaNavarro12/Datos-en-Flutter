@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class otherPage extends StatelessWidget {
-  const otherPage({Key? key}) : super(key: key);
+class pruebaStack extends StatelessWidget {
+  const pruebaStack({Key? key}) : super(key: key);
 
 @override Widget build(BuildContext context) { 
   return Scaffold( 
     appBar: AppBar( 
-      title: const Text('Página Datos Stack'), 
+      title: const Text('Página Stack'), 
       backgroundColor: Colors.deepPurple,
       ), 
       body: Center( 
@@ -22,12 +22,7 @@ class otherPage extends StatelessWidget {
                 Container( 
                   width: 300.0, 
                   height: 300.0, 
-                  decoration: const BoxDecoration( 
-                    image: DecorationImage( 
-                      image: NetworkImage('https://leanmind.es/images/min/flutter-bloc.png') 
-                    ) 
-                  ), 
-                ), 
+                  color: Colors.red, ), 
                   Positioned( 
                     top: 80.0, 
                     left: 80.0, 

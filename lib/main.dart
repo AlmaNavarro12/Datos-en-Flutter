@@ -2,6 +2,8 @@ import 'package:datos/pages/datosPage.dart';
 import 'package:datos/pages/otherPage.dart';
 import 'package:datos/pages/secondScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:datos/pages/pruebaStack.dart';
+import 'package:datos/pages/datosStack.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -13,10 +15,11 @@ void main() {
         '/second': (context) => SecondScreen(),
         '/datos': (context) => const DatosPage(),
         '/otherPage' : (context) => const otherPage(),
+        '/prueba': (context) => pruebaStack(),
+        '/datosStack': (context) => datosStack(),
       }));
 }
 
-//
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -45,8 +48,6 @@ class HomePage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    /*final route = MaterialPageRoute(
-                      builder: (context) => const SecondScreen(),*/
                     Navigator.pushNamed(context, '/second');
                   },
                   child: const Text('Segunda pantalla'),
@@ -59,13 +60,20 @@ class HomePage extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/otherPage');
+                    Navigator.pushNamed(context, '/prueba');
                   },
-                  child: const Text('Tercera pantalla'),
+                  child: const Text('Prueba Stack'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/datosStack');
+                  },
+                  child: const Text('Datos Stack'),
                 ),
               ],
             ),
           ),
-        ));
+        )
+      );
   }
 }
