@@ -34,7 +34,7 @@ class _FormScreenState extends State<FormScreen> {
           child: TextField(
             autofocus: true,
             controller: _controller, //Se usa el guión _ para diferenciar la variable
-            onSubmitted: (String value) async { //? se dice si es opcional
+            onSubmitted: (String value) async { //? se dice si es opcional, pero debe tener un valor inicial
               await showDialog<void>(
                   context: context,
                   builder: (BuildContext context) {
