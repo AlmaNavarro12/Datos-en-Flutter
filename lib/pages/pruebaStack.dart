@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class pruebaStack extends StatelessWidget {
-  const pruebaStack({Key? key}) : super(key: key);
+class PruebaStack extends StatelessWidget {
+  const PruebaStack({Key? key}) : super(key: key);
 
 @override Widget build(BuildContext context) { 
   return Scaffold( 

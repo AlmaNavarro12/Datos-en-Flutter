@@ -1,9 +1,12 @@
 import 'package:datos/pages/datosPage.dart';
+import 'package:datos/pages/form.dart';
+import 'package:datos/pages/fornulario.dart';
 import 'package:datos/pages/otherPage.dart';
 import 'package:datos/pages/secondScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:datos/pages/pruebaStack.dart';
 import 'package:datos/pages/datosStack.dart';
+import 'package:datos/pages/form.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -14,9 +17,11 @@ void main() {
         '/': (context) => const HomePage(),
         '/second': (context) => SecondScreen(),
         '/datos': (context) => const DatosPage(),
-        '/otherPage' : (context) => const otherPage(),
-        '/prueba': (context) => pruebaStack(),
-        '/datosStack': (context) => datosStack(),
+        '/otherPage': (context) => const OtherPage(),
+        '/prueba': (context) => PruebaStack(),
+        '/datosStack': (context) => DatosStack(),
+        '/formScreen': (context) => FormScreen(),
+        '/formularioScreen': (context) => FormularioScreen(),
       }));
 }
 
@@ -70,10 +75,21 @@ class HomePage extends StatelessWidget {
                   },
                   child: const Text('Datos Stack'),
                 ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/formScreen');
+                  },
+                  child: const Text('Longitud'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/formularioScreen');
+                  },
+                  child: const Text('Formulario'),
+                ),
               ],
             ),
           ),
-        )
-      );
+        ));
   }
 }

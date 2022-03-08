@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class datosStack extends StatelessWidget {
-  const datosStack({Key? key}) : super(key: key);
+class DatosStack extends StatelessWidget {
+  const DatosStack({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,8 @@ class datosStack extends StatelessWidget {
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold)),
-                      )),
+                      )
+                  ),
                   Positioned(
                       top: 220.0, 
                       left: 110.0,
